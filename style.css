@@ -130,4 +130,5 @@ footer {
   width: 7vw;
   border-radius: 15px;
   color: white;
+  cursor: pointer;
 }
