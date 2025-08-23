@@ -28,5 +28,4 @@ if (response.ok) {
 } else {
   return null;
 }*/
-
 /*Lien vers la doc : https://developer.mozilla.org/fr/docs/Web/API/Fetch_API/Using_Fetch*/
