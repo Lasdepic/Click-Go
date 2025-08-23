@@ -78,11 +78,12 @@ export function clickCart() {
       btnDeleteProd.addEventListener("click", () => {
         listDrop.remove();
       });
-    });
 
-    btnCheckout.addEventListener('click', () => {
-        window.location.href = '../pages/cartCheckout.html';
-    })
+      // ---------------------- Ajout du listener sur le bouton checkout ----------------------
+      btnCheckout.addEventListener('click', () => {
+        window.location.href = '../../pages/cartCheckout.html';
+      });
+    });
   }
   createCardsCart();
 }
