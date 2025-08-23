@@ -37,15 +37,15 @@
     <main>
         <div class="checkout-container">
             <!-- Cards a gauche -->
-            <section class="cart-summary">
-                <div class="cart-header">
-                    <span>Mon Panier</span>
+            <section class="cart-summary" aria-label="Résumé du panier">
+                <div class="cart-header" aria-label="En-tête du panier">
+                    <h2>Mon Panier</h2>
                     <span class="cart-total">Total<span id="cart-total-price"></span></span>
                 </div>
-                <ul class="cart-items-list" id="cart-items-list">
+                <ul class="cart-items-list" id="cart-items-list" aria-label="Liste des articles du panier">
                     <!-- List du panier -->
                 </ul>
-                <div class="cart-footer">
+                <div class="cart-footer" aria-label="Résumé des totaux du panier">
                     <div class="cart-subtotal-row">
                         <span>Sous Total :</span>
                         <span id="cart-subtotal"></span>
@@ -61,44 +61,44 @@
                 </div>
             </section>
             <!-- Renseignement de la personne -->
-            <section class="checkout-info">
-                <form class="checkout-form">
-                    <fieldset class="delivery-address">
-                        <legend>Adresse de livraison</legend>
+            <section class="checkout-info" aria-label="Informations de paiement et de livraison">
+                <form class="checkout-form" aria-label="Formulaire de commande">
+                    <fieldset class="delivery-address" aria-label="Adresse de livraison">
+                        <h2>Adresse de livraison</h2>
                         <div class="form-row">
-                            <input type="text" placeholder="Nom *" name="lastname" required>
-                            <input type="text" placeholder="Prénom *" name="firstname" required>
+                            <input type="text" placeholder="Nom *" name="lastname" required aria-label="Nom">
+                            <input type="text" placeholder="Prénom *" name="firstname" required aria-label="Prénom">
                         </div>
-                        <input type="text" placeholder="Adresse *" name="address" required>
+                        <input type="text" placeholder="Adresse *" name="address" required aria-label="Adresse">
                         <div class="form-row">
-                            <input type="text" placeholder="Ville *" name="city" required>
-                            <input type="text" placeholder="Code postal *" name="postal" required>
+                            <input type="text" placeholder="Ville *" name="city" required aria-label="Ville">
+                            <input type="text" placeholder="Code postal *" name="postal" required aria-label="Code postal">
                         </div>
                         <div class="form-row">
-                            <input type="email" placeholder="Email *" name="email" required>
-                            <input type="tel" placeholder="Téléphone *" name="phone" required>
+                            <input type="email" placeholder="Email *" name="email" required aria-label="Email">
+                            <input type="tel" placeholder="Téléphone *" name="phone" required aria-label="Téléphone">
                         </div>
                     </fieldset>
-                    <fieldset class="payment-method">
-                        <legend>Mode de Paiement</legend>
-                        <input type="text" placeholder="Numéro de carte" name="card-number" required>
+                    <fieldset class="payment-method" aria-label="Mode de paiement">
+                        <h2>Mode de Paiement</h2>
+                        <input type="text" placeholder="Numéro de carte" name="card-number" required aria-label="Numéro de carte">
                         <div class="form-row">
-                            <input type="text" placeholder="Date d'exp" name="exp-date" required>
-                            <input type="text" placeholder="CVV" name="cvv" required>
+                            <input type="text" placeholder="Date d'exp" name="exp-date" required aria-label="Date d'expiration">
+                            <input type="text" placeholder="CVV" name="cvv" required aria-label="CVV">
                         </div>
-                        <input type="text" placeholder="Nom du titulaire de la carte" name="card-name" required>
+                        <input type="text" placeholder="Nom du titulaire de la carte" name="card-name" required aria-label="Nom du titulaire de la carte">
                     </fieldset>
-                    <fieldset class="delivery-method">
-                        <legend>Mode de Livraison</legend>
+                    <fieldset class="delivery-method" aria-label="Mode de livraison">
+                        <h2>Mode de Livraison</h2>
                         <div class="delivery-options">
-                            <label><input type="radio" name="delivery" value="eco" checked> Livraison éco <span class="delivery-date"></span> <span class="delivery-price"></span></label>
-                            <label><input type="radio" name="delivery" value="chronopost"> Chronopost <span class="delivery-date"></span> <span class="delivery-price"></span></label>
-                            <label><input type="radio" name="delivery" value="colissimo"> Colissimo <span class="delivery-date"></span> <span class="delivery-price"></span></label>
+                            <label><input type="radio" name="delivery" value="eco" checked aria-label="Livraison éco"> Livraison éco <span class="delivery-date"></span> <span class="delivery-price"></span></label>
+                            <label><input type="radio" name="delivery" value="chronopost" aria-label="Chronopost"> Chronopost <span class="delivery-date"></span> <span class="delivery-price"></span></label>
+                            <label><input type="radio" name="delivery" value="colissimo" aria-label="Colissimo"> Colissimo <span class="delivery-date"></span> <span class="delivery-price"></span></label>
                         </div>
                     </fieldset>
                     <div class="accept-validate">
-                        <label><input type="checkbox" required> J'ai lu les conditions générales de vente et j'y adhère sans réserve.</label>
-                        <button type="submit" class="validate-btn">Valider</button>
+                        <label><input type="checkbox" required aria-label="Accepter les conditions générales de vente"> J'ai lu les conditions générales de vente et j'y adhère sans réserve.</label>
+                        <button type="submit" class="validate-btn" aria-label="Valider la commande">Valider</button>
                     </div>
                 </form>
             </section>
