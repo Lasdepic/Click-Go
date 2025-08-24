@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Détail Produit</title>
     <link rel="icon" type="image/x-icon" href="assets\logo\favicon.ico" />
+    <link rel="stylesheet" href="variables.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -29,6 +30,7 @@
           aria-label="Rechercher"
         />
       </div>
+
       <div class="icon-btn">
         <button id="btnConnectUser" aria-label="Connexion">
           <svg
@@ -43,7 +45,11 @@
             />
           </svg>
         </button>
-        <button id="btnCartCheckout" aria-label="Panier">
+        <a
+          id="btnCartCheckout"
+          href="pages/cartCheckout.html"
+          aria-label="Panier"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="80px"
@@ -55,15 +61,35 @@
               d="M286.79-81Q257-81 236-102.21t-21-51Q215-183 236.21-204t51-21Q317-225 338-203.79t21 51Q359-123 337.79-102t-51 21Zm400 0Q657-81 636-102.21t-21-51Q615-183 636.21-204t51-21Q717-225 738-203.79t21 51Q759-123 737.79-102t-51 21ZM235-741l110 228h288l125-228H235Zm-30-60h589.07q22.97 0 34.95 21 11.98 21-.02 42L694-495q-11 19-28.56 30.5T627-453H324l-56 104h491v60H277q-42 0-60.5-28t.5-63l64-118-152-322H51v-60h117l37 79Zm140 288h288-288Z"
             />
           </svg>
-        </button>
+        </a>
       </div>
     </header>
     <main>
+      <nav class="main-nav">
+        <button class="nav-toggle" aria-label="Ouvrir le menu">
+          &#9776;
+          <!-- icône hamburger -->
+        </button>
+        <ul class="nav-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li>
+            <a href="#">Produits</a>
+            <ul class="menu"></ul>
+          </li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">À propos</a></li>
+        </ul>
+      </nav>
       <section id="product-detail">
         <article class="product-main">
           <!-- Image du produit -->
           <figure class="product-images">
-            <img class="product-image" src="" alt="" />
+            <img
+              class="product-image"
+              src=""
+              alt="Image du produit sélectionné"
+              loading="lazy"
+            />
           </figure>
 
           <!-- Infos produit -->
@@ -76,7 +102,11 @@
             <div class="purchase">
               <label for="quantity">Quantité :</label>
               <input type="number" id="quantity" min="1" value="1" />
-              <button id="add-to-cart" class="btn-add-to-cart">
+              <button
+                id="add-to-cart"
+                class="btn-add-to-cart"
+                aria-label="Ajouter ce produit au panier avec la quantité sélectionnée"
+              >
                 Ajouter au panier
               </button>
               <p id="message" class="cart-message"></p>
