@@ -13,3 +13,10 @@ export const categories = [
   "Mens watches",
   "Mobile accessories",
 ];
+
+/*
+export const tabProducts (id) {
+const data = id[0];
+
+
+} */

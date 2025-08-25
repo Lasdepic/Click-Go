@@ -1,3 +1,5 @@
+import { buttonAddCart } from "../shared/localStorage";
+
 const btnCart = document.querySelector("#btnCartCheckout");
 const mainBody = document.querySelector("main");
 
@@ -80,8 +82,8 @@ export function clickCart() {
       });
 
       // ---------------------- Ajout du listener sur le bouton checkout ----------------------
-      btnCheckout.addEventListener('click', () => {
-        window.location.href = '../../pages/cartCheckout.html';
+      btnCheckout.addEventListener("click", () => {
+        window.location.href = "../../pages/cartCheckout.html";
       });
     });
   }
