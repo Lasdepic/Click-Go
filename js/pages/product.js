@@ -1,4 +1,3 @@
-
 /* Les champs JSON récupérés dans le script :
   id = via l’URL (getProductById(id))
   thumbnail = image principale

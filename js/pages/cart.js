@@ -1,3 +1,5 @@
+import { buttonAddCart } from "../shared/localStorage";
+
 const btnCart = document.querySelector("#btnCartCheckout");
 const mainBody = document.querySelector("main");
 
@@ -80,8 +82,8 @@ export function clickCart() {
       });
 
       // ---------------------- Btn Paiement pour joindre la page checkout ----------------------
-      btnCheckout.addEventListener('click', () => {
-        window.location.href = '../checkout.html';
+      btnCheckout.addEventListener("click", () => {
+        window.location.href = "../checkout.html";
       });
     });
   }

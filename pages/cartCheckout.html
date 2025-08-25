@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../assets/logo/favicon.ico" />
+    <link rel="stylesheet" href="../variables.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Paiement</title>
+  </head>
+
+  <body>
+    <!----------------------------------------------------------------------------------------HEADER----------------------------------------------------------------------------->
+    <header>
+      <div class="logo">
+        <a href="../index.html"
+          ><img
+            src="../assets/logo/ClickAngGo.png"
+            width="250"
+            height="250"
+            alt="Logo du site"
+            aria-label="Logo du site"
+        /></a>
+      </div>
+      <div class="searchInput">
+        <label for="site-search" aria-placeholder="Rechercher"></label>
+        <input
+          type="search"
+          id="site-search"
+          placeholder="Rechercher"
+          name="q"
+          aria-label="Rechercher"
+        />
+      </div>
+      <div class="icon-btn">
+        <button id="btnConnectUser" aria-label="Connexion">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="90px"
+            width="90px"
+            viewBox="0 -960 960 960"
+            fill="#FFFFFF"
+          >
+            <path
+              d="M480-481q-66 0-108-42t-42-108q0-66 42-108t108-42q66 0 108 42t42 108q0 66-42 108t-108 42ZM160-160v-94q0-38 19-65t49-41q67-30 128.5-45T480-420q62 0 123 15.5t127.92 44.69q31.3 14.13 50.19 40.97Q800-292 800-254v94H160Zm60-60h520v-34q0-16-9.5-30.5T707-306q-64-31-117-42.5T480-360q-57 0-111 11.5T252-306q-14 7-23 21.5t-9 30.5v34Zm260-321q39 0 64.5-25.5T570-631q0-39-25.5-64.5T480-721q-39 0-64.5 25.5T390-631q0 39 25.5 64.5T480-541Zm0-90Zm0 411Z"
+            />
+          </svg>
+        </button>
+        <button id="btnCartCheckout" aria-label="Panier">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="80px"
+            width="80px"
+            viewBox="0 -960 960 960"
+            fill="#FFFFFF"
+          >
+            <path
+              d="M286.79-81Q257-81 236-102.21t-21-51Q215-183 236.21-204t51-21Q317-225 338-203.79t21 51Q359-123 337.79-102t-51 21Zm400 0Q657-81 636-102.21t-21-51Q615-183 636.21-204t51-21Q717-225 738-203.79t21 51Q759-123 737.79-102t-51 21ZM235-741l110 228h288l125-228H235Zm-30-60h589.07q22.97 0 34.95 21 11.98 21-.02 42L694-495q-11 19-28.56 30.5T627-453H324l-56 104h491v60H277q-42 0-60.5-28t.5-63l64-118-152-322H51v-60h117l37 79Zm140 288h288-288Z"
+            />
+          </svg>
+        </button>
+      </div>
+    </header>
+    <!----------------------------------------------------------------------------------------MAIN----------------------------------------------------------------------------->
+    <main>
+      <div class="checkout-container">
+        <!-- Cards a gauche -->
+        <section class="cart-summary" aria-label="Résumé du panier">
+          <div class="cart-header" aria-label="En-tête du panier">
+            <h2>Mon Panier</h2>
+            <span class="cart-total"
+              >Total<span id="cart-total-price"></span
+            ></span>
+          </div>
+          <ul
+            class="cart-items-list"
+            id="cart-items-list"
+            aria-label="Liste des articles du panier"
+          >
+            <!-- List du panier -->
+          </ul>
+          <div class="cart-footer" aria-label="Résumé des totaux du panier">
+            <div class="cart-subtotal-row">
+              <span>Sous Total :</span>
+              <span id="cart-subtotal"></span>
+            </div>
+            <div class="cart-shipping-row">
+              <span>Frais de port :</span>
+              <span id="cart-shipping"></span>
+            </div>
+            <div class="cart-total-row">
+              <span>Sous Total :</span>
+              <span id="cart-total"></span>
+            </div>
+          </div>
+        </section>
+        <!-- Renseignement de la personne -->
+        <section
+          class="checkout-info"
+          aria-label="Informations de paiement et de livraison"
+        >
+          <form class="checkout-form" aria-label="Formulaire de commande">
+            <fieldset
+              class="delivery-address"
+              aria-label="Adresse de livraison"
+            >
+              <h2>Adresse de livraison</h2>
+              <div class="form-row">
+                <input
+                  type="text"
+                  placeholder="Nom *"
+                  name="lastname"
+                  required
+                  aria-label="Nom"
+                />
+                <input
+                  type="text"
+                  placeholder="Prénom *"
+                  name="firstname"
+                  required
+                  aria-label="Prénom"
+                />
+              </div>
+              <input
+                type="text"
+                placeholder="Adresse *"
+                name="address"
+                required
+                aria-label="Adresse"
+              />
+              <div class="form-row">
+                <input
+                  type="text"
+                  placeholder="Ville *"
+                  name="city"
+                  required
+                  aria-label="Ville"
+                />
+                <input
+                  type="text"
+                  placeholder="Code postal *"
+                  name="postal"
+                  required
+                  aria-label="Code postal"
+                />
+              </div>
+              <div class="form-row">
+                <input
+                  type="email"
+                  placeholder="Email *"
+                  name="email"
+                  required
+                  aria-label="Email"
+                />
+                <input
+                  type="tel"
+                  placeholder="Téléphone *"
+                  name="phone"
+                  required
+                  aria-label="Téléphone"
+                />
+              </div>
+            </fieldset>
+            <fieldset class="payment-method" aria-label="Mode de paiement">
+              <h2>Mode de Paiement</h2>
+              <input
+                type="text"
+                placeholder="Numéro de carte"
+                name="card-number"
+                required
+                aria-label="Numéro de carte"
+              />
+              <div class="form-row">
+                <input
+                  type="text"
+                  placeholder="Date d'exp"
+                  name="exp-date"
+                  required
+                  aria-label="Date d'expiration"
+                />
+                <input
+                  type="text"
+                  placeholder="CVV"
+                  name="cvv"
+                  required
+                  aria-label="CVV"
+                />
+              </div>
+              <input
+                type="text"
+                placeholder="Nom du titulaire de la carte"
+                name="card-name"
+                required
+                aria-label="Nom du titulaire de la carte"
+              />
+            </fieldset>
+            <fieldset class="delivery-method" aria-label="Mode de livraison">
+              <h2>Mode de Livraison</h2>
+              <div class="delivery-options">
+                <label
+                  ><input
+                    type="radio"
+                    name="delivery"
+                    value="eco"
+                    checked
+                    aria-label="Livraison éco" />
+                  Livraison éco <span class="delivery-date"></span>
+                  <span class="delivery-price"></span
+                ></label>
+                <label
+                  ><input
+                    type="radio"
+                    name="delivery"
+                    value="chronopost"
+                    aria-label="Chronopost" />
+                  Chronopost <span class="delivery-date"></span>
+                  <span class="delivery-price"></span
+                ></label>
+                <label
+                  ><input
+                    type="radio"
+                    name="delivery"
+                    value="colissimo"
+                    aria-label="Colissimo" />
+                  Colissimo <span class="delivery-date"></span>
+                  <span class="delivery-price"></span
+                ></label>
+              </div>
+            </fieldset>
+            <div class="accept-validate">
+              <label
+                ><input
+                  type="checkbox"
+                  required
+                  aria-label="Accepter les conditions générales de vente"
+                />
+                J'ai lu les conditions générales de vente et j'y adhère sans
+                réserve.</label
+              >
+              <button
+                type="submit"
+                class="validate-btn"
+                aria-label="Valider la commande"
+              >
+                Valider
+              </button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <p>
+        Copyright © Tous droits réservés - ClickAndGo 2025  Site Web réalisé
+        par Elodie Jordan Joao
+      </p>
+    </footer>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
