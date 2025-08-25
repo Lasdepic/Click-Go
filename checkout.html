@@ -84,7 +84,7 @@
                         <input type="number" placeholder="Numéro de carte" name="card-number" required aria-label="Numéro de carte">
                         <div class="form-row">
                             <input type="month" name="exp-date" required aria-label="Date d'expiration">
-                            <input type="number" placeholder="CVV" name="cvv" required aria-label="CVV">
+                            <input class="cvv-input" type="text" maxlength="3" inputmode="numeric" pattern="\\d{3}" placeholder="CVV" name="cvv" required aria-label="CVV" title="3 chiffres (ex: 123)" oninput="this.value = this.value.replace(/\\D/g, '').slice(0,3)">
                         </div>
                         <input type="text" placeholder="Nom du titulaire de la carte" name="card-name" required aria-label="Nom du titulaire de la carte">
                     </fieldset>
