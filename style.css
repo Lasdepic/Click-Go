@@ -127,8 +127,9 @@ footer {
   background-color: var(--color-primary);
   height: 4vh;
   width: 7vw;
-  border-radius: var(--radius-medium);
-  color: var(--color-text-light);
+  border-radius: 15px;
+  color: white;
+  cursor: pointer;
 }
 
 /* ########################## CHECKOUT PAGE ########################## */
