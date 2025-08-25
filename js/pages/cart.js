@@ -79,7 +79,7 @@ export function clickCart() {
         listDrop.remove();
       });
 
-      // ---------------------- Ajout du listener sur le bouton checkout ----------------------
+      // ---------------------- Btn Paiement pour joindre la page checkout ----------------------
       btnCheckout.addEventListener('click', () => {
         window.location.href = '../../pages/cartCheckout.html';
       });
