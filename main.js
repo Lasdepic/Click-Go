@@ -1,3 +1,5 @@
-import { clickCart } from "./modules/cart.js";
+import { clickCart } from "./js/pages/cart.js";
+import { productsList } from "./js/pages/index.js";
 
-clickCart()
+clickCart();
+productsList();
