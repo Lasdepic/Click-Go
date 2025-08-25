@@ -81,7 +81,7 @@ export function clickCart() {
 
       // ---------------------- Btn Paiement pour joindre la page checkout ----------------------
       btnCheckout.addEventListener('click', () => {
-        window.location.href = '../../pages/cartCheckout.html';
+        window.location.href = '../checkout.html';
       });
     });
   }
